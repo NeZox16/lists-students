@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+
+.title {
+    text-align: center;
+}
+.btn-warpper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    gap: 13px;
+    width: 25%;
+    border-radius: 8px;
+    max-height: 0px;
+    transition: max-height .5s;
+    overflow: hidden;
+}
+
+.btn-warpper.active {
+    max-height: 400px;
+}
+
+.modal-window {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .9);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: all .5s ease;
+}
+
+.modal-window.active {
+    display: flex;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 3;
+}
+
+.form {
+    z-index: 4;
+}
+
+.error-div {
+    height: auto;
+    display: grid;
+    gap: 10px;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    right: 0;
+}
+
+.error-name, .error-surname, .error-middlename, .error-date, .error-study, .error-fac, .error-course {
+    background: red;
+    color: #fff;
+    padding: 7px;
+    position: absolute;
+    border-radius: 15px;
+    margin: 0;
+    -webkit-box-shadow: 8px 8px 24px -12px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 24px -12px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 24px -12px rgba(66, 68, 90, 1);
+    text-align: right;
+    transition: all .5s ease;
+    right: -50%;
+}
+
+.error-name.active-error {
+    top: 0;
+    right: 0;
+    transition: all .5s ease;
+}
+.error-surname.active-error {
+    top: 45px;
+    right: 0;
+    transition: all .5s ease;
+}
+.error-middlename.active-error {
+    top: 90px;
+    right: 0;
+    transition: all .5s ease;
+}
+.error-date.active-error {
+    top: 135px;
+    right: 0;
+    transition: all .5s ease;
+}
+.error-study.active-error {
+    top: 180px;
+    right: 0;
+    transition: all .5s ease;
+}
+.error-fac.active-error {
+    top: 225px;
+    right: 0;
+    transition: all .5s ease;
+}
+.error-course.active-error {
+    top: 270px;
+    right: 0;
+    transition: all .5s ease;
+}
+
+.btn-warpper-second {
+    position: relative;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.btn-surname, .btn-date, .btn-fac, .btn-year, .btn-start-year {
+    text-align: left;
+}
+
+.input-filter {
+    width: 170px;
+    height: 30px;
+}
